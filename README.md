@@ -7,7 +7,7 @@ Following steps from [CodingWithDom Youtube Series](https://www.youtube.com/watc
 
 - $ npm init -y # create a default 
 - $ npm install nightwatch --save-dev # add first dependency
-- set $.scripts.test to "nightwatch"
+- set package.json $.scripts.test to "nightwatch"
 - $ npm i chromedriver --save-dev
 
     >Workaround on error indicating chromedriver only supports chrome version 83 when current version in system is 80 
