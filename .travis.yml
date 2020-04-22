@@ -7,6 +7,12 @@ dist: trusty
 addons:
   chrome: stable
 before_install:
+  - echo "before install"
+  - npm i chromedriver --save-dev
+  - CHROMEDRIVER_VERSION=LATEST_80 npm install chromedriver --save-dev
+  - echo "npm setup done"
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9922 http://localhost &
+  - echo "after install"
 script:
   - xvfb-run npm test
+
