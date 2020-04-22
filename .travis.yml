@@ -8,6 +8,8 @@ addons:
   chrome: stable
 before_install:
   - echo "before install"
+  - echo "node -v" `node -v`
+  - echo "npm -v" `npm -v`
   - CHROMEDRIVER_VERSION=LATEST_80 npm install chromedriver --save-dev
   - echo "npm setup done"
   - google-chrome-stable --headless --disable-gpu --remote-debugging-port=9922 http://localhost &
