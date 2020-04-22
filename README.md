@@ -51,12 +51,12 @@ ____
 
 
 ### Debugging
-######Break at start:
+###### Break at start:
 
 - Start with ```$ node --help```
 - Use ```--inspect-brk[=[host:]port]``` to activate inspector on host:port to break at start of script, then use debugger to step through code
 
-######Break naive:
+###### Break naive:
 - ```npx which nightwatch```
 - Use npx to get the absolute path of nightwatch ```npx which nightwatch```
 
@@ -70,7 +70,7 @@ ____
 - Note that the double dash -- allows you to pass in arguments to npm script
 - Add ```"debugger;"``` within test script, run, stops at this location
 
-######Break as expected:
+###### Break as expected:
 * When nightwatch executes your test file, it grabs each command and puts it in a "command queue" on the side. It doesn't execute 
 everything in a synchronous way. But it looks synchronous because because there are no .then(), or callbacks. And once it has created the queue, then it starts actually executing commands.
 * But that requires us to use a client nightwatch command, and add ```.perform(() => { debugger; })``` within the chain in order to break where we expect to break.
