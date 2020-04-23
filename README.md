@@ -40,6 +40,24 @@ TravisCI gives option to use on Google Chrome
 ___
 
 
+### BrowserStack 
+[BrowserStack Live](https://live.browserstack.com/dashboard#os=android&os_version=5.1&device=Google+Nexus+9&device_browser=chrome&zoom_to_fit=true&full_screen=true&url=www.browserstack.com%2Fwelcome&speed=1), 
+[Products > Automate](https://automate.browserstack.com/dashboard/v2/getting-started), 
+[Selenium with Nightwatch](https://www.browserstack.com/automate/nightwatch)
+
+###### Quick Start Guide 
+
+- Browserstack - Get Username and Access Key
+- Browserstack - Get Capabilities configuration in target language, [capabilities generator](https://www.browserstack.com/automate/capabilities)
+- Project - Create a .env file with ```BROWSERSTACK_USER=<username>``` and ```BROWSERSTACK_KEY=accesskey```
+- Project - Update dependency, "dotenv" in package.json file
+- Project - Add require statement at the top of nightwatch.conf.js file
+- Project - Add nightwatch.browserstack.conf.js
+- Project - Add to package.json $.scripts, ```"test:browserstack": "nightwatch -c nightwatch.browserstack.conf.js"```
+
+___
+
+
 ### Page Objects
 [Nightwatch docs](https://nightwatchjs.org/guide/working-with-page-objects/)
 >Pattern to write e2e tests by wrapping pages or page fragments into objects. Allows software client to do and see anything a human can by abstracting away the underlying html actions needed to access and manipulate the page.
