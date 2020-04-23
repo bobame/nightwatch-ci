@@ -54,6 +54,10 @@ ___
 - Project - Add require statement at the top of nightwatch.conf.js file
 - Project - Add nightwatch.browserstack.conf.js
 - Project - Add to package.json $.scripts, ```"test:browserstack": "nightwatch -c nightwatch.browserstack.conf.js"```
+- Run with non default browser defined in nightwatch.browserstack.conf.js by running
+    $ npm run test:browserstack -- --env default
+    $ npm run test:browserstack -- --env firefox
+    $ npm run test:browserstack -- --env default,firefox
 
 ___
 
