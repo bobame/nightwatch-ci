@@ -6,13 +6,16 @@
   "scripts": {
     "lint": "eslint .",
     "debug": "node --inspect-brk /Users/grace/Documents/Courses/testing-hunt/nightwatch-test/breadth-first-tinker/youtubeCodingWithDom/intro-nightwatch/node_modules/.bin/nightwatch",
-    "test": "nightwatch"
+    "test": "nightwatch",
+    "test:browserstack": "nightwatch -c nightwatch.browserstack.conf.js"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
     "chromedriver": "^81.0.0",
+    "dotenv": "^7.0.0",
+    "eslint": "^5.15.1",
     "nightwatch": "^1.3.4"
   },
   "directories": {
@@ -73,7 +76,6 @@
     "depd": "^1.1.2",
     "diff": "^3.5.0",
     "dir-glob": "^3.0.1",
-    "dotenv": "^7.0.0",
     "ecc-jsbn": "^0.1.2",
     "ejs": "^2.7.4",
     "emoji-regex": "^7.0.3",
