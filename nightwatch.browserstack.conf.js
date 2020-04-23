@@ -11,9 +11,7 @@ const config = {
 
 // different format than what is provided at start guide because extending baseConfig
 config.test_settings.default.desiredCapabilities['browserstack.user'] = process.env.BROWSERSTACK_USER;
-console.log("INFO: Username: ", process.env.BROWSERSTACK_USER);
 config.test_settings.default.desiredCapabilities['browserstack.key'] = process.env.BROWSERSTACK_KEY;
-console.log("INFO: Access key: ", process.env.BROWSERSTACK_KEY);
 // reset/clear chrome args 
 config.test_settings.default.desiredCapabilities.chromeOptions.args = [];
 
