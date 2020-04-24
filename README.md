@@ -59,6 +59,65 @@ ___
     $ npm run test:browserstack -- --env firefox
     $ npm run test:browserstack -- --env default,firefox
 
+    
+___
+
+
+### VRT - Visual Regression Testing
+[Crunch-io nightwatch-vrt](https://github.com/Crunch-io/nightwatch-vrt)
+
+- Project - Add separate local configuration file for VRT, ```nightwatch.vrt.conf.js```
+- Dependency - Run $ npm i nightwatch-vrt --save
+- Project - Add directory for ```vrt-tests```
+- Project - Add test JS file(s) inside ```vrt-tests```
+- Project - In ```nightwatch.vrt.conf.js``` add to ```config``` const, ```src_folders: ['vrt-tests']```
+- Project - Add to ```package.json``` to $.scripts, ```"test:vrt": "nightwatch -c nightwatch.vrt.conf.js"``` and ```"consolidate:vrt": "CONSOLIDATE=1 npm run test:vrt"```
+
+TODO:  Debugging VRT configuration
+```
+TypeError: target[name] is not a function
+
+0 info it worked if it ends with ok
+1 verbose cli [ '/usr/local/bin/node', '/usr/local/bin/npm', 'run', 'test:vrt' ]
+
+2 info using npm@6.14.4
+3 info using node@v10.16.0
+4 verbose run-script [ 'pretest:vrt', 'test:vrt', 'posttest:vrt' ]
+5 info lifecycle nightwatch-ci@1.0.0~pretest:vrt: nightwatch-ci@1.0.0
+6 info lifecycle nightwatch-ci@1.0.0~test:vrt: nightwatch-ci@1.0.0
+7 verbose lifecycle nightwatch-ci@1.0.0~test:vrt: unsafe-perm in lifecycle true
+8 verbose lifecycle nightwatch-ci@1.0.0~test:vrt: PATH: ........
+9 verbose lifecycle nightwatch-ci@1.0.0~test:vrt: CWD: /Users/grace/Documents/Courses/nightwatch-ci
+10 silly lifecycle nightwatch-ci@1.0.0~test:vrt: Args: [ '-c', 'nightwatch -c nightwatch.vrt.conf.js' ]
+11 silly lifecycle nightwatch-ci@1.0.0~test:vrt: Returned: code: 5  signal: null
+12 info lifecycle nightwatch-ci@1.0.0~test:vrt: Failed to exec test:vrt script
+13 verbose stack Error: nightwatch-ci@1.0.0 test:vrt: `nightwatch -c nightwatch.vrt.conf.js`
+13 verbose stack Exit status 5
+13 verbose stack     at EventEmitter.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-lifec
+
+ycle/index.js:332:16)
+13 verbose stack     at EventEmitter.emit (events.js:198:13)
+13 verbose stack     at ChildProcess.<anonymous> (/usr/local/lib/node_modules/npm/node_modules/npm-lifec
+ycle/lib/spawn.js:55:14)
+13 verbose stack     at ChildProcess.emit (events.js:198:13)
+13 verbose stack     at maybeClose (internal/child_process.js:982:16)
+13 verbose stack     at Process.ChildProcess._handle.onexit (internal/child_process.js:259:5)
+14 verbose pkgid nightwatch-ci@1.0.0
+15 verbose cwd /Users/grace/Documents/Courses/nightwatch-ci
+16 verbose Darwin 17.7.0
+17 verbose argv "/usr/local/bin/node" "/usr/local/bin/npm" "run" "test:vrt"
+18 verbose node v10.16.0
+19 verbose npm  v6.14.4
+20 error code ELIFECYCLE
+21 error errno 5
+22 error nightwatch-ci@1.0.0 test:vrt: `nightwatch -c nightwatch.vrt.conf.js`
+22 error Exit status 5
+23 error Failed at the nightwatch-ci@1.0.0 test:vrt script.
+23 error This is probably not a problem with npm. There is likely additional logging output above.
+24 verbose exit [ 5, true ]
+
+```
+ 
 ___
 
 
