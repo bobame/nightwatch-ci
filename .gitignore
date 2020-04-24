@@ -3,4 +3,3 @@ tests_output
 *.log
 package-lock.json
 .env
-package-lock.json
