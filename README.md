@@ -121,6 +121,19 @@ ycle/lib/spawn.js:55:14)
 ___
 
 
+### Cucumber
+[Nightwatch-API for Cucumber](https://nightwatch-api.netlify.app/)
+
+- Dependencies - Run $ $ npm install --save nightwatch-api cucumber cucumber-pretty
+- Project - Add ```cucumber.conf.js``` from [CodingWithDom](https://github.com/coding-with-dom/intro-to-nightwatchjs)
+- Project - Add ```features``` directory with feature file(s)
+- Project - Add ```step-definitions``` directory with step definition file(s)
+- Project - Add script to execute cucumber tests in ```package.json```, ```"test:cucumber": "cucumber-js --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty"```
+
+
+___
+
+
 ### Page Objects
 [Nightwatch docs](https://nightwatchjs.org/guide/working-with-page-objects/)
 >Pattern to write e2e tests by wrapping pages or page fragments into objects. Allows software client to do and see anything a human can by abstracting away the underlying html actions needed to access and manipulate the page.

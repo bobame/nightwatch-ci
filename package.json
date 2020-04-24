@@ -9,7 +9,8 @@
     "test": "nightwatch",
     "test:browserstack": "nightwatch -c nightwatch.browserstack.conf.js",
     "test:vrt": "nightwatch -c nightwatch.vrt.conf.js",
-    "consolidate:vrt": "CONSOLIDATE=1 npm run test:vrt"
+    "consolidate:vrt": "CONSOLIDATE=1 npm run test:vrt",
+    "test:cucumber": "cucumber-js --require cucumber.conf.js --require step-definitions --format node_modules/cucumber-pretty"
   },
   "keywords": [],
   "author": "",
@@ -64,6 +65,8 @@
     "combined-stream": "^1.0.8",
     "concat-map": "^0.0.1",
     "core-util-is": "^1.0.2",
+    "cucumber": "^6.0.5",
+    "cucumber-pretty": "^6.0.0",
     "dashdash": "^1.14.1",
     "data-uri-to-buffer": "^1.2.0",
     "debug": "^3.2.6",
@@ -193,6 +196,7 @@
     "ms": "^2.1.1",
     "mute-stream": "^0.0.8",
     "netmask": "^1.0.6",
+    "nightwatch-api": "^3.0.1",
     "nightwatch-vrt": "^0.2.10",
     "node-environment-flags": "^1.0.5",
     "oauth-sign": "^0.9.0",
