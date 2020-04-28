@@ -1,3 +1,11 @@
+// https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
+function sleep(millis) {
+    var date = new Date();
+    var curDate = null;
+    do { curDate = new Date(); }
+    while(curDate-date < millis);
+};
+
 module.exports = {
     '@tags': ['study-hn'],
     '@disabled': false,
@@ -70,8 +78,12 @@ module.exports = {
         loginPage
             .waitForElementVisible('@loginBtn')
             .enterLoginCredentialsFromFile();
+        sleep(5000)
+            ;
+
         homePage
             .assert.visible('@navLink_logout')
+            .printPageInfo()
             ;
 
     },
