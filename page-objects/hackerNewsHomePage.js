@@ -45,23 +45,6 @@ module.exports = {
             return this.click('@moreLink');
         },
 
-        // https://stackoverflow.com/questions/951021/what-is-the-javascript-version-of-sleep
-        sleep(millis) {
-            var date = new Date();
-            var curDate = null;
-            do { curDate = new Date(); }
-            while(curDate-date < millis);
-        },
-
-        printPageInfo() {
-            // this.element('css', '.pagetop a[href="newest"]', function(result) {
-            //     console.log("test amit");
-            // });
-            console.log(this.getText('@navLink_new'));
-
-            return this;
-        },
-
         // clickNavigationLink(value) {
         //      switch (value) {
         //         case "new":

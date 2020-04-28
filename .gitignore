@@ -4,3 +4,4 @@ tests_output
 package-lock.json
 .env
 test.js
+ignorethis/*
