@@ -166,7 +166,7 @@
     "jsprim": "^1.4.1",
     "levn": "^0.3.0",
     "locate-path": "^3.0.0",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.19",
     "lodash._arraycopy": "^3.0.0",
     "lodash._arrayeach": "^3.0.0",
     "lodash._baseassign": "^3.2.0",
