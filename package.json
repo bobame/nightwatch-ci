@@ -214,7 +214,7 @@
     "p-map": "^3.0.0",
     "p-try": "^2.2.0",
     "pac-proxy-agent": "^3.0.1",
-    "pac-resolver": "^3.0.0",
+    "pac-resolver": "^5.0.0",
     "path-exists": "^3.0.0",
     "path-is-absolute": "^1.0.1",
     "path-type": "^4.0.0",
