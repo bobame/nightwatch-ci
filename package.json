@@ -107,7 +107,7 @@
     "fill-range": "^7.0.1",
     "find-up": "^3.0.0",
     "flat": "^4.1.0",
-    "follow-redirects": "^1.5.10",
+    "follow-redirects": "^1.14.7",
     "forever-agent": "^0.6.1",
     "form-data": "^2.3.3",
     "fs.realpath": "^1.0.0",
